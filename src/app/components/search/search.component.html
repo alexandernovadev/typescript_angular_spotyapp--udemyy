@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col">
+<!-- 
+    Para extraer un valor de un input html hay que hacer un 
+    hashtag jajajja y despues popner .value para obterner el valor -->
+    <input class="form-control" placeholder="Buscar Artista..." #txtbuscar
+    type="text" (keyup)="buscar(txtbuscar.value)">
+  </div>
+</div>
+<app-loading *ngIf="loading" ></app-loading>
+<app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
